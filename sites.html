@@ -102,6 +102,57 @@
         .designer-btn:hover {
             transform: scale(1.05);
         }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-image: url('png/FundoCelular.png');
+            }
+
+            .header {
+                padding-top: 10px;
+                position: relative;
+            }
+
+            .logo {
+                max-width: 68px;
+                margin-top: 27px;
+            }
+
+            .contato-btn {
+                max-width: 100px;
+                position: absolute;
+                left: calc(50% - 150px);
+                top: 32px;
+            }
+
+            .sites-btn {
+                max-width: 100px;
+                position: absolute;
+                left: calc(50% - 150px);
+                top: 80px;
+            }
+
+            .conheca-btn {
+                max-width: 100px;
+                position: absolute;
+                right: calc(50% - 150px);
+                top: 32px;
+            }
+
+            .designer-btn {
+                max-width: 100px;
+                position: absolute;
+                right: calc(50% - 150px);
+                top: 80px;
+            }
+
+            .contato-btn:hover,
+            .sites-btn:hover,
+            .conheca-btn:hover,
+            .designer-btn:hover {
+                transform: scale(1.02);
+            }
+        }
     </style>
 </head>
 <body>
