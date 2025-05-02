@@ -106,6 +106,10 @@
         @media screen and (max-width: 768px) {
             body {
                 background-image: url('png/Fundo-conheca-Celular.png');
+                min-height: 100vh;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                overflow-y: auto;
             }
 
             .header {
@@ -146,6 +150,15 @@
                 top: 80px;
             }
 
+            .sobre-mim-img {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                display: block;
+                margin: 20px auto;
+                padding-bottom: 20px;
+            }
+
             .contato-btn:hover,
             .sites-btn:hover,
             .conheca-btn:hover,
@@ -173,6 +186,6 @@
             <img src="png/logo.png" alt="Logo" class="logo">
         </a>
     </div>
-    <h1>CONHEÇA</h1>
+    <img src="png/sobre-mim.png" alt="Sobre Mim" class="sobre-mim-img">
 </body>
 </html>
