@@ -8,11 +8,32 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh;
             background-image: url('png/fundo-conheca.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow-y: auto;
+        }
+
+        .sobre-mim-desktop {
+            width: 100%;
+            max-width: 1920px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            padding: 20px 0;
+            position: relative;
+            top: -40px;
+        }
+        .sobre-mim-mobile {
+            display: none;
+            width: 100%;
+            max-width: 1920px;
+            height: auto;
+            margin: 0 auto;
+            padding: 20px 0;
         }
 
         h1 {
@@ -150,20 +171,13 @@
                 top: 80px;
             }
 
-            .sobre-mim-img {
-                width: 100%;
-                max-width: 500px;
-                height: auto;
-                display: block;
-                margin: 20px auto;
-                padding-bottom: 20px;
+            .sobre-mim-desktop {
+                display: none;
             }
-
-            .contato-btn:hover,
-            .sites-btn:hover,
-            .conheca-btn:hover,
-            .designer-btn:hover {
-                transform: scale(1.02);
+            
+            .sobre-mim-mobile {
+                display: block;
+                max-width: 500px;
             }
         }
     </style>
@@ -186,6 +200,7 @@
             <img src="png/logo.png" alt="Logo" class="logo">
         </a>
     </div>
-    <img src="png/sobre-mim.png" alt="Sobre Mim" class="sobre-mim-img">
+    <img src="png/sobre-mimdesktop.png" alt="Sobre Mim Desktop" class="sobre-mim-desktop">
+    <img src="png/sobre-mim.png" alt="Sobre Mim Mobile" class="sobre-mim-mobile">
 </body>
 </html>
