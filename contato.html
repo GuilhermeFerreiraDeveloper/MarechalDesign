@@ -8,11 +8,13 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh;
             background-image: url('png/fundo-contato.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow-y: auto;
         }
 
         h1 {
@@ -21,6 +23,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            display: none; /* Ocultando o h1 */
         }
 
         .header {
@@ -106,6 +109,10 @@
         @media screen and (max-width: 768px) {
             body {
                 background-image: url('png/botao-contatocelular.png');
+                background-attachment: fixed;
+                background-size: cover;
+                min-height: 100vh;
+                overflow-y: auto;
             }
 
             .header {
@@ -153,6 +160,94 @@
                 transform: scale(1.02);
             }
         }
+
+        .papiro-mobile {
+            display: none;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 0 auto;
+            padding: 20px 0;
+            min-height: calc(100vh - 200px); /* Ajusta a altura mínima considerando o header */
+        }
+
+        .papiro-desktop {
+            display: block;
+            width: 100%;
+            max-width: 1920px;
+            height: auto;
+            margin: 0 auto;
+            padding: 20px 0;
+            position: relative;
+            z-index: 1;
+            min-height: calc(100vh - 200px);
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-image: url('png/botao-contatocelular.png');
+            }
+
+            .header {
+                padding-top: 10px;
+                position: relative;
+            }
+
+            .logo {
+                max-width: 68px;
+                margin-top: 27px;
+            }
+
+            .contato-btn {
+                max-width: 100px;
+                position: absolute;
+                left: calc(50% - 150px);
+                top: 32px;
+            }
+
+            .sites-btn {
+                max-width: 100px;
+                position: absolute;
+                left: calc(50% - 150px);
+                top: 80px;
+            }
+
+            .conheca-btn {
+                max-width: 100px;
+                position: absolute;
+                right: calc(50% - 150px);
+                top: 32px;
+            }
+
+            .designer-btn {
+                max-width: 100px;
+                position: absolute;
+                right: calc(50% - 150px);
+                top: 80px;
+            }
+
+            .contato-btn:hover,
+            .sites-btn:hover,
+            .conheca-btn:hover,
+            .designer-btn:hover {
+                transform: scale(1.02);
+            }
+
+            .papiro-mobile {
+                display: block;
+                position: relative;
+                z-index: 1;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            .papiro-desktop {
+                display: none;
+                position: relative;
+                z-index: 1;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -173,6 +268,7 @@
             <img src="png/logo.png" alt="Logo" class="logo">
         </a>
     </div>
-    <h1>CONTATO</h1>
+    <img src="png/papiroMobile.png" alt="Papiro Mobile" class="papiro-mobile">
+    <img src="png/papiroDesktop.png" alt="Papiro Desktop" class="papiro-desktop">
 </body>
 </html>
