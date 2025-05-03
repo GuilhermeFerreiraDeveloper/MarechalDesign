@@ -183,11 +183,11 @@
             min-height: calc(100vh - 200px);
         }
 
-        .whatsapp-btn-desktop {
+        .instagram-btn-desktop {
             position: absolute;
             left: 40%;
             transform: translateX(-50%);
-            top: 175%;
+            top: 125%;
             z-index: 3;
             cursor: pointer;
             transition: transform 0.2s ease;
@@ -196,6 +196,35 @@
             height: auto;
             display: block;
         }
+
+        .whatsapp-btn-desktop {
+            position: absolute;
+            left: 40%;
+            transform: translateX(-50%);
+            top: 140%;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            max-width: 890px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .linkedin-btn-desktop {
+            position: absolute;
+            left: 40%;
+            transform: translateX(-50%);
+            top: 155%;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            max-width: 890px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
 
         .whatsapp-btn-mobile {
             position: absolute;
@@ -209,20 +238,6 @@
             width: 100%;
             height: auto;
             display: none;
-        }
-
-        .linkedin-btn-desktop {
-            position: absolute;
-            left: 40%;
-            transform: translateX(-50%);
-            top: 195%;
-            z-index: 3;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-            max-width: 890px;
-            width: 100%;
-            height: auto;
-            display: block;
         }
 
         .linkedin-btn-mobile {
@@ -239,19 +254,6 @@
             display: none;
         }
 
-        .instagram-btn-desktop {
-            position: absolute;
-            left: 40%;
-            transform: translateX(-50%);
-            top: 155%;
-            z-index: 3;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-            max-width: 890px;
-            width: 100%;
-            height: auto;
-            display: block;
-        }
 
         .instagram-btn-mobile {
             position: absolute;
@@ -392,6 +394,48 @@
 
             .linkedin-btn-mobile {
                 top: 75%;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .instagram-btn-mobile {
+                top: 55%;
+            }
+            
+            .whatsapp-btn-mobile {
+                top: 60%;
+            }            
+
+            .linkedin-btn-mobile {
+                top: 65%;
+            }
+        }
+
+                @media screen and (max-width: 360px) {/* sansung x8 */
+            .instagram-btn-mobile {
+                top: 55%;
+            }
+            
+            .whatsapp-btn-mobile {
+                top: 60%;
+            }            
+
+            .linkedin-btn-mobile {
+                top: 65%;
+            }
+        }
+
+        @media screen and (max-width: 360px) { /* iphone xr */
+            .instagram-btn-mobile {
+                top: 55%;
+            }
+            
+            .whatsapp-btn-mobile {
+                top: 60%;
+            }            
+
+            .linkedin-btn-mobile {
+                top: 65%;
             }
         }
         </style>

@@ -8,11 +8,35 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh;
             background-image: url('png/fundo.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow-y: auto;
+        }
+
+        .sites-desktop {
+            width: 100%;
+            max-width: 1920px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            padding: 20px 0;
+            position: relative;
+            top: -40px;
+            z-index: 2;
+        }
+        
+        .sites-mobile {
+            display: none;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 0 auto;
+            padding: 20px 0;
+            z-index: 2;
         }
 
         h1 {
@@ -21,6 +45,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            display: none;
         }
 
         .header {
@@ -106,6 +131,10 @@
         @media screen and (max-width: 768px) {
             body {
                 background-image: url('png/FundoCelular.png');
+                min-height: 100vh;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                overflow-y: auto;
             }
 
             .header {
@@ -152,6 +181,120 @@
             .designer-btn:hover {
                 transform: scale(1.02);
             }
+            .sites-desktop {
+                display: none;
+            }
+            
+            .sites-mobile {
+                display: block;
+                max-width: 500px;
+            }
+        }
+        .bolos-btn-desktop {
+            position: absolute;
+            left: 20%;
+            transform: translateX(-50%);
+            top: 165%;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            width: 30%;
+            height: auto;
+            display: block;
+        }
+
+        .bolos-btn-mobile {
+            display: none;
+        }
+
+        .bolos-btn-desktop:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        /* Media query específica para mobile */
+        @media screen and (max-width: 768px) {
+            body {
+                background-image: url('png/FundoCelular.png');
+                min-height: 100vh;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                overflow-y: auto;
+            }
+
+            .header {
+                padding-top: 10px;
+                position: relative;
+            }
+
+            .logo {
+                max-width: 68px;
+                margin-top: 27px;
+            }
+
+            .contato-btn {
+                max-width: 100px;
+                position: absolute;
+                left: calc(50% - 150px);
+                top: 32px;
+            }
+
+            .sites-btn {
+                max-width: 100px;
+                position: absolute;
+                left: calc(50% - 150px);
+                top: 80px;
+            }
+
+            .conheca-btn {
+                max-width: 100px;
+                position: absolute;
+                right: calc(50% - 150px);
+                top: 32px;
+            }
+
+            .designer-btn {
+                max-width: 100px;
+                position: absolute;
+                right: calc(50% - 150px);
+                top: 80px;
+            }
+
+            .contato-btn:hover,
+            .sites-btn:hover,
+            .conheca-btn:hover,
+            .designer-btn:hover {
+                transform: scale(1.02);
+            }
+
+            .sites-desktop {
+                display: none;
+            }
+            
+            .sites-mobile {
+                display: block;
+                max-width: 500px;
+            }
+
+            .bolos-btn-desktop {
+                display: none;
+            }
+
+            .bolos-btn-mobile {
+                position: absolute;
+                left: 20%;
+                transform: translateX(-50%);
+                top: 60%;
+                z-index: 3;
+                cursor: pointer;
+                transition: transform 0.2s ease;
+                width: 30%;
+                height: auto;
+                display: block;
+            }
+
+            .bolos-btn-mobile:hover {
+                transform: translateX(-50%) scale(1.05);
+            }
         }
     </style>
 </head>
@@ -174,5 +317,11 @@
         </a>
     </div>
     <h1>SITES</h1>
+    <img src="png/desktopSITES.png" alt="Sites Desktop" class="sites-desktop">
+    <img src="png/mobileSITES.png" alt="Sites Mobile" class="sites-mobile">
+    <a href="https://bolosdacris.online" target="_blank">
+        <img src="png/botao-bolodacris.png" alt="Bolos da Cris" class="bolos-btn-desktop">
+        <img src="png/botao-bolodacris.png" alt="Bolos da Cris" class="bolos-btn-mobile">
+    </a>
 </body>
 </html>
