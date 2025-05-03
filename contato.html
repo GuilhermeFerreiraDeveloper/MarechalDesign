@@ -167,8 +167,8 @@
             max-width: 500px;
             height: auto;
             margin: 0 auto;
-            padding: 20px 0;
-            min-height: calc(100vh - 200px); /* Ajusta a altura mínima considerando o header */
+            padding: 10px 0;
+            min-height: calc(100vh - 200px);
         }
 
         .papiro-desktop {
@@ -183,9 +183,121 @@
             min-height: calc(100vh - 200px);
         }
 
+        .whatsapp-btn-desktop {
+            position: absolute;
+            left: 40%;
+            transform: translateX(-50%);
+            top: 175%;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            max-width: 890px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .whatsapp-btn-mobile {
+            position: absolute;
+            left: 38%;
+            transform: translateX(-50%);
+            top: 60%;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .linkedin-btn-desktop {
+            position: absolute;
+            left: 40%;
+            transform: translateX(-50%);
+            top: 195%;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            max-width: 890px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .linkedin-btn-mobile {
+            position: absolute;
+            left: 38%;
+            transform: translateX(-50%);
+            top: 65%;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .instagram-btn-desktop {
+            position: absolute;
+            left: 40%;
+            transform: translateX(-50%);
+            top: 155%;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            max-width: 890px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .instagram-btn-mobile {
+            position: absolute;
+            left: 38%;
+            transform: translateX(-50%);
+            top: 55%;
+            z-index: 3;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .instagram-btn-desktop:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        .instagram-btn-mobile:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        .whatsapp-btn-desktop:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        .whatsapp-btn-mobile:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        .linkedin-btn-desktop:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        .linkedin-btn-mobile:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
         @media screen and (max-width: 768px) {
             body {
                 background-image: url('png/botao-contatocelular.png');
+                background-attachment: fixed;
+                background-size: cover;
+                min-height: 100vh;
+                overflow-y: auto;
             }
 
             .header {
@@ -240,13 +352,33 @@
                 margin-bottom: 0;
                 padding-bottom: 0;
             }
+
             .papiro-desktop {
                 display: none;
-                position: relative;
-                z-index: 1;
-                margin-bottom: 0;
-                padding-bottom: 0;
             }
+
+            .whatsapp-btn-desktop {
+                display: none;
+            }
+            .whatsapp-btn-mobile {
+                display: block;
+            }
+            .linkedin-btn-mobile {
+                display: block;
+            }
+            
+            .linkedin-btn-desktop {
+                display: none;
+            }
+
+            .instagram-btn-desktop {
+                display: none;
+            }
+
+           .instagram-btn-mobile {
+                display: block;
+            }
+            
         }
     </style>
 </head>
@@ -270,5 +402,19 @@
     </div>
     <img src="png/papiroMobile.png" alt="Papiro Mobile" class="papiro-mobile">
     <img src="png/papiroDesktop.png" alt="Papiro Desktop" class="papiro-desktop">
+    <a href="https://www.linkedin.com/in/guilhermeferreiradev/" target="_blank">
+        <img src="png/linkedin.png" alt="LinkedIn" class="linkedin-btn-desktop">
+    </a>
+    <a href="https://www.linkedin.com/in/guilhermeferreiradev/" target="_blank">
+        <img src="png/linkedin.png" alt="LinkedIn" class="linkedin-btn-mobile">
+    </a>
+    <a href="https://wa.me/5512988769627" target="_blank">
+        <img src="png/whatsapp.png" alt="WhatsApp" class="whatsapp-btn-desktop">
+        <img src="png/whatsapp.png" alt="WhatsApp" class="whatsapp-btn-mobile">
+    </a>
+    <a href="https://www.instagram.com/oldmarechal/" target="_blank">
+        <img src="png/instagram.png" alt="Instagram" class="instagram-btn-desktop">
+        <img src="png/instagram.png" alt="Instagram" class="instagram-btn-mobile">
+    </a>
 </body>
 </html>
